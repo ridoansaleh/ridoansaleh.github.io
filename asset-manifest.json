@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0ccbcf6.chunk.css",
+    "main.js": "/static/js/main.07154653.chunk.js",
+    "main.js.map": "/static/js/main.07154653.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6ca114df.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6ca114df.js.map",
+    "static/js/2.f990db29.chunk.js": "/static/js/2.f990db29.chunk.js",
+    "static/js/2.f990db29.chunk.js.map": "/static/js/2.f990db29.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8df0e9ab52a0550b35967d5da472fce5.js": "/precache-manifest.8df0e9ab52a0550b35967d5da472fce5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b0ccbcf6.chunk.css.map": "/static/css/main.b0ccbcf6.chunk.css.map",
+    "static/js/2.f990db29.chunk.js.LICENSE.txt": "/static/js/2.f990db29.chunk.js.LICENSE.txt",
+    "static/media/belajar-react-redux.png": "/static/media/belajar-react-redux.c77d8b83.png",
+    "static/media/doraemon.png": "/static/media/doraemon.53e0be3a.png",
+    "static/media/eat-burger.png": "/static/media/eat-burger.d4988eab.png",
+    "static/media/jasa-keuangan.png": "/static/media/jasa-keuangan.c94b8ead.png",
+    "static/media/katalog-buku.png": "/static/media/katalog-buku.90fb784d.png",
+    "static/media/learn-gatsby-formik.png": "/static/media/learn-gatsby-formik.2ca49abb.png",
+    "static/media/my-music.png": "/static/media/my-music.afab7fee.png",
+    "static/media/profile.png": "/static/media/profile.7c2bd6b8.png",
+    "static/media/socmed-dashboard.png": "/static/media/socmed-dashboard.86f6ebc2.png",
+    "static/media/spotify.png": "/static/media/spotify.0c8cb106.png",
+    "static/media/vue-todo.png": "/static/media/vue-todo.ece52bcb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ca114df.js",
+    "static/js/2.f990db29.chunk.js",
+    "static/css/main.b0ccbcf6.chunk.css",
+    "static/js/main.07154653.chunk.js"
+  ]
+}
