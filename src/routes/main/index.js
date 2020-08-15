@@ -31,6 +31,7 @@ import linkedInIcon from "./assets/linkedin.png";
 import twitterIcon from "./assets/twitter.png";
 import mediumIcon from "./assets/medium.png";
 import { SKILLS } from "./data";
+import { META } from "../../constant";
 
 function Main() {
   const history = useHistory();
@@ -68,17 +69,15 @@ function Main() {
   return (
     <>
       <Helmet>
-        <link
-          rel="canonical"
-          href="https://ridoansaleh.github.io/my-profile/"
-        />
-        <meta
-          name="description"
-          content="He is a software engineer that has 3+ years of experience building
-          small to large modern web applications for reputable companies. His
-          passion towards his works make him always keep up to the latest
-          technologies in the community."
-        />
+        <meta name="description" content={META.description} />
+        <meta property="og:title" content={META.title} />
+        <meta property="og:description" content={META.description} />
+        <meta property="og:image" content={META.image} />
+        <meta property="og:url" content={META.url} />
+        <meta name="twitter:title" content={META.title} />
+        <meta name="twitter:description" content={META.description} />
+        <meta name="twitter:image" content={META.image} />
+        <meta name="twitter:card" content={META.card} />
       </Helmet>
       <Profile>
         <Avatar src={profileImg} />
