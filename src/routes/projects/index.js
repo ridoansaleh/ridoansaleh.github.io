@@ -13,6 +13,7 @@ import {
   Link,
 } from "./_projectsStyle";
 import PROJECT_LIST, { REACT_LIST, VUE_LIST } from "./data";
+import { META } from "../../constant";
 
 function Projects() {
   const [filter, setFilter] = useState("");
@@ -33,14 +34,9 @@ function Projects() {
   return (
     <>
       <Helmet>
-        <link
-          rel="canonical"
-          href="https://ridoansaleh.github.io/my-profile/"
-        />
-        <meta
-          name="description"
-          content="List of opensource projects that build using library / framework like React and Vue. These are side projects of Ridoan Saleh Nasution."
-        />
+        <meta name="description" content={META.description_projects} />
+        <meta property="og:description" content={META.description_projects} />
+        <meta name="twitter:description" content={META.description_projects} />
       </Helmet>
       <Filter>
         <Label>Filter By:</Label>
