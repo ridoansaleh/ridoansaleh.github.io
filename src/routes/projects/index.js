@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
@@ -12,12 +12,18 @@ import {
   Text,
   Link,
 } from "./_projectsStyle";
+import useScrollup from "../../hooks/useScrollup";
 import PROJECT_LIST, { REACT_LIST, VUE_LIST } from "./data";
 import { META } from "../../constant";
 
 function Projects() {
   const [filter, setFilter] = useState("");
   const [projects, setProjects] = useState(PROJECT_LIST);
+  const { setScroll } = useScrollup();
+
+  useEffect(() => {
+    setScroll(true);
+  }, []);
 
   const handleFilterChange = (e) => {
     const { value } = e.target;
@@ -57,15 +63,34 @@ function Projects() {
               src={project.image}
               width="100%"
             />
-            <Text>
-              Repository :{" "}
-              <Link href={project.repository}>
-                {project.repository.split("ridoansaleh/")[1]}
-              </Link>
-            </Text>
-            <Text>Deployment Status : {project.deployment_status}</Text>
-            <Text>Template : {project.template}</Text>
-            <Link href={project.demo}>Demo</Link>
+            <table>
+              <tr>
+                <td>Repository</td>
+                <td>
+                  <Link href={project.repository}>
+                    {project.repository.split("ridoansaleh/")[1]}
+                  </Link>
+                </td>
+              </tr>
+              <tr>
+                <td>Deployment status</td>
+                <td>
+                  <Text>{project.deployment_status}</Text>
+                </td>
+              </tr>
+              <tr>
+                <td>Template</td>
+                <td>
+                  <Text>{project.template}</Text>
+                </td>
+              </tr>
+              <tr>
+                <td>Demo</td>
+                <td>
+                  <Link href={project.demo}>link</Link>
+                </td>
+              </tr>
+            </table>
           </ListItem>
         ))}
       </List>
