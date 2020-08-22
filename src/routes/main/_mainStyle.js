@@ -60,7 +60,7 @@ export const Socials = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  border: 1px solid #57595a;
+  border: 1px solid #abb2b9;
   margin-bottom: 5px;
   padding: 2px 4px;
   box-sizing: border-box;
@@ -115,13 +115,33 @@ const Button = styled.button`
 
 export const EmailButton = styled(Button)`
   width: 100%;
-  background-color: #f16950;
+  background-color: #fff;
+  border: 1px solid #abb2b9;
+  color: #57595a;
   margin-bottom: 5px;
+
+  &:hover {
+    background-color: #f16950;
+    border: 1px solid #f16950;
+    color: #fff;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const WhatsAppButton = styled(Button)`
   width: 100%;
-  background-color: #46cf86;
+  background-color: #fff;
+  border: 1px solid #abb2b9;
+  color: #57595a;
+
+  &:hover {
+    background-color: #46cf86;
+    border: 1px solid #46cf86;
+    color: #fff;
+  }
 `;
 
 export const Skills = styled(Section)`
@@ -182,7 +202,15 @@ export const WorksTitle = styled.div`
 export const ProjectButton = styled(Button)`
   text-transform: uppercase;
   width: 100%;
-  background-color: #f16950;
+  background-color: #fff;
+  border: 1px solid #abb2b9;
+  color: #57595a;
+
+  &:hover {
+    background-color: #0a0a0a;
+    border: 1px solid #0a0a0a;
+    color: #fff;
+  }
 `;
 
 export const Feedback = styled.section`
@@ -210,4 +238,10 @@ export const SendButton = styled(Button)`
   text-transform: uppercase;
   width: 100%;
   background-color: #46cf86;
+
+  &:hover {
+    background-color: #fff;
+    border: 1.5px solid #46cf86;
+    color: #57595a;
+  }
 `;

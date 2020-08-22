@@ -55,6 +55,15 @@ export const ListItem = styled.div`
   > div:nth-child(5) {
     margin-bottom: 20px;
   }
+  tr {
+    td {
+      padding: 2px 0;
+    }
+
+    td:nth-child(2) {
+      padding-left: 10px;
+    }
+  }
 `;
 
 export const ProjectName = styled.div`
@@ -66,4 +75,6 @@ export const ProjectName = styled.div`
 
 export const Text = styled.div``;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+  text-decoration: none;
+`;

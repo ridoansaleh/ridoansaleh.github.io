@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
@@ -30,11 +30,17 @@ import profileImg from "./assets/profile.png";
 import linkedInIcon from "./assets/linkedin.png";
 import twitterIcon from "./assets/twitter.png";
 import mediumIcon from "./assets/medium.png";
+import useScrollup from "../../hooks/useScrollup";
 import { SKILLS } from "./data";
 import { META } from "../../constant";
 
 function Main() {
   const history = useHistory();
+  const { setScroll } = useScrollup();
+
+  useEffect(() => {
+    setScroll(true);
+  }, []);
 
   const handleSeeProjectsClick = () => {
     history.push("/projects");
