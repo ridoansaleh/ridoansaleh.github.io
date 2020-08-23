@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   Filter,
@@ -14,7 +13,6 @@ import {
 } from "./_projectsStyle";
 import useScrollup from "../../hooks/useScrollup";
 import PROJECT_LIST, { REACT_LIST, VUE_LIST } from "./data";
-import { META } from "../../constant";
 
 function Projects() {
   const [filter, setFilter] = useState("");
@@ -39,11 +37,6 @@ function Projects() {
 
   return (
     <>
-      <Helmet>
-        <meta name="description" content={META.description_projects} />
-        <meta property="og:description" content={META.description_projects} />
-        <meta name="twitter:description" content={META.description_projects} />
-      </Helmet>
       <Filter>
         <Label>Filter By:</Label>
         <Select value={filter} onChange={handleFilterChange}>
