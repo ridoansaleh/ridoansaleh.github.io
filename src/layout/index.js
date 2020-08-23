@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "./header";
+import Footer from "./footer";
 
-function CoreLayout(props) {
+function Layout(props) {
   return (
     <div className="page">
       <Header />
@@ -12,4 +12,4 @@ function CoreLayout(props) {
   );
 }
 
-export default CoreLayout;
+export default Layout;

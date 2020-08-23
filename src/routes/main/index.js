@@ -80,10 +80,11 @@ function Main() {
         <meta property="og:description" content={META.description} />
         <meta property="og:image" content={META.image} />
         <meta property="og:url" content={META.url} />
+        <meta name="twitter:card" content={META.card} />
+        <meta name="twitter:site" content={META.site} />
         <meta name="twitter:title" content={META.title} />
         <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={META.image} />
-        <meta name="twitter:card" content={META.card} />
+        <meta name="twitter:image" content={META.twitter_image} />
       </Helmet>
       <Profile>
         <Avatar src={profileImg} />
