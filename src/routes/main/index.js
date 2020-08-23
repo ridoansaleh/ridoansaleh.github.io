@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import {
   Profile,
   Avatar,
@@ -32,7 +31,6 @@ import twitterIcon from "./assets/twitter.png";
 import mediumIcon from "./assets/medium.png";
 import useScrollup from "../../hooks/useScrollup";
 import { SKILLS } from "./data";
-import { META } from "../../constant";
 
 function Main() {
   const history = useHistory();
@@ -74,18 +72,6 @@ function Main() {
 
   return (
     <>
-      <Helmet>
-        <meta name="description" content={META.description} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:image" content={META.image} />
-        <meta property="og:url" content={META.url} />
-        <meta name="twitter:card" content={META.card} />
-        <meta name="twitter:site" content={META.site} />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={META.twitter_image} />
-      </Helmet>
       <Profile>
         <Avatar src={profileImg} />
         <Name>Ridoan Saleh Nasution</Name>
