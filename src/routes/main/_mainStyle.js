@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Section = styled.section`
   box-shadow: 0.1px 0.1px 2.3px 0.1px grey;
@@ -7,6 +7,12 @@ const Section = styled.section`
   @media only screen and (min-width: 1024px) {
     padding: 20px;
   }
+`;
+
+export const fadeInElement = keyframes`
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; margin-top: 38px; }
+  100% { opacity: 1;  margin-top: 23px; }
 `;
 
 export const Profile = styled(Section)`
@@ -79,7 +85,11 @@ export const Label = styled.div`
 `;
 
 export const Contact = styled(Section)`
-  margin-top: 23px;
+  animation-name: ${({ isPassed }) => (isPassed ? fadeInElement : "none")};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-top: 53px;
+  opacity: 0.5;
 
   > div {
     margin-top: 50px;
@@ -145,7 +155,11 @@ export const WhatsAppButton = styled(Button)`
 `;
 
 export const Skills = styled(Section)`
-  margin-top: 23px;
+  animation-name: ${({ isPassed }) => (isPassed ? fadeInElement : "none")};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-top: 53px;
+  opacity: 0.5;
 `;
 
 export const SkillsTitle = styled.div`
@@ -179,7 +193,11 @@ export const Load = styled.div`
 `;
 
 export const Works = styled(Section)`
-  margin-top: 23px;
+  animation-name: ${({ isPassed }) => (isPassed ? fadeInElement : "none")};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-top: 53px;
+  opacity: 0.5;
 
   > button {
     margin-top: 30px;
@@ -214,10 +232,14 @@ export const ProjectButton = styled(Button)`
 `;
 
 export const Feedback = styled.section`
-  margin-top: 23px;
   padding: 40px 0 10px;
   display: flex;
   flex-direction: column;
+  animation-name: ${({ isPassed }) => (isPassed ? fadeInElement : "none")};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-top: 53px;
+  opacity: 0.5;
 
   > p {
     text-align: center;

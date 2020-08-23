@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useHistory } from "react-router-dom";
 import {
   Profile,
@@ -31,14 +31,52 @@ import twitterIcon from "./assets/twitter.png";
 import mediumIcon from "./assets/medium.png";
 import useScrollup from "../../hooks/useScrollup";
 import { SKILLS } from "./data";
+import { getElDistanceToTop } from "../../utils";
 
 function Main() {
   const history = useHistory();
+  const [skillsDistance, setSkillsDistance] = useState(0);
+  const [contactDistance, setContactDistance] = useState(0);
+  const [projectsDistance, setProjectsDistance] = useState(0);
+  const [feedbackDistance, setFeedbackDistance] = useState(0);
+  const [isSkillsPassed, setSkillsPassed] = useState(false);
+  const [isContactPassed, setContactPassed] = useState(false);
+  const [isProjectsPassed, setProjectsPassed] = useState(false);
+  const [isFeedbackPassed, setFeedbackPassed] = useState(false);
   const { setScroll } = useScrollup();
 
   useEffect(() => {
     setScroll(true);
   }, []);
+
+  const handleScroll = () => {
+    if (window.innerHeight + window.scrollY > skillsDistance) {
+      setSkillsPassed(true);
+    }
+    if (window.innerHeight + window.scrollY > contactDistance) {
+      setContactPassed(true);
+    }
+    if (window.innerHeight + window.scrollY > projectsDistance) {
+      setProjectsPassed(true);
+    }
+    if (window.innerHeight + window.scrollY > feedbackDistance) {
+      setFeedbackPassed(true);
+    }
+  };
+
+  useLayoutEffect(() => {
+    setSkillsDistance(getElDistanceToTop("skills"));
+    setContactDistance(getElDistanceToTop("contact"));
+    setProjectsDistance(getElDistanceToTop("projects"));
+    setFeedbackDistance(getElDistanceToTop("feedback"));
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [contactDistance]);
 
   const handleSeeProjectsClick = () => {
     history.push("/projects");
@@ -97,7 +135,7 @@ function Main() {
           </IconWrapper>
         </Socials>
       </Profile>
-      <Skills>
+      <Skills id="skills" isPassed={isSkillsPassed}>
         <SkillsTitle>Skills</SkillsTitle>
         <Text>
           These are the skills that he has acquired along of his journey as a
@@ -109,7 +147,7 @@ function Main() {
           </BoxSkill>
         ))}
       </Skills>
-      <Contact>
+      <Contact id="contact" isPassed={isContactPassed}>
         <Text>
           Currently, he is working on a company as a Fullstack JavaScript
           Developer. But, outside of his working hours and at the weekend he
@@ -124,7 +162,7 @@ function Main() {
           </WhatsAppButton>
         </ButtonGroup>
       </Contact>
-      <Works>
+      <Works id="projects" isPassed={isProjectsPassed}>
         <WorksTitle>Projects</WorksTitle>
         <Text>
           This is a list of several projects that he has been working on. Some
@@ -139,7 +177,7 @@ function Main() {
           See Projects
         </ProjectButton>
       </Works>
-      <Feedback>
+      <Feedback id="feedback" isPassed={isFeedbackPassed}>
         <Text>Have one or some feedbacks for this page ?</Text>
         <SendButton onClick={handleSendClick}>Send</SendButton>
       </Feedback>
