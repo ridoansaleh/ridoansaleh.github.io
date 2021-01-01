@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb08696499056e132d537b3b1bffb8c0",
+    "revision": "b1d1079ebf0f00aedd2ce56946ca8fe2",
     "url": "/index.html"
   },
   {
-    "revision": "70acc44a2ec281188423",
+    "revision": "57b104612524893db19b",
     "url": "/static/css/main.b0ccbcf6.chunk.css"
   },
   {
-    "revision": "8e8bbbcda730ff23871e",
-    "url": "/static/js/2.11e404ed.chunk.js"
+    "revision": "ced262198fb8da3dc9dd",
+    "url": "/static/js/2.ceac2f50.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.11e404ed.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.ceac2f50.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "70acc44a2ec281188423",
-    "url": "/static/js/main.80281a52.chunk.js"
+    "revision": "57b104612524893db19b",
+    "url": "/static/js/main.396c62e6.chunk.js"
   },
   {
     "revision": "673e5c742396be9db985",
@@ -28,12 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/belajar-react-redux.c77d8b83.png"
   },
   {
+    "revision": "bd9c3ea05b8e911a8e9f6d83a4521b05",
+    "url": "/static/media/checkout-form.bd9c3ea0.png"
+  },
+  {
     "revision": "53e0be3af9e91d3afbb4128fa9fe614c",
     "url": "/static/media/doraemon.53e0be3a.png"
   },
   {
-    "revision": "d4988eab29595158a8a8db761f4efa46",
-    "url": "/static/media/eat-burger.d4988eab.png"
+    "revision": "681cfeb5a8a6617e799e56402c3d80ca",
+    "url": "/static/media/eat_burger.681cfeb5.png"
+  },
+  {
+    "revision": "15b26a1bd41a065f99954a701e568bef",
+    "url": "/static/media/fb_auth_pages.15b26a1b.png"
   },
   {
     "revision": "c94b8eadbc34040b8e646537d4cd0693",
@@ -62,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0c8cb10645f29c7c0b93996678cffd38",
     "url": "/static/media/spotify.0c8cb106.png"
+  },
+  {
+    "revision": "1a24774a756a444e92b3b6feb72fb651",
+    "url": "/static/media/up-arrow.1a24774a.svg"
   },
   {
     "revision": "ece52bcb1bccfab57a9026e4e620d5bd",
