@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import BackToTop from "../components/BackToTop";
 
 function Layout(props) {
   return (
-    <div className="page">
-      <Header />
-      <main>{props.children}</main>
-      <Footer />
-    </div>
+    <>
+      <div className="page">
+        <Header />
+        <main>{props.children}</main>
+        <Footer />
+      </div>
+      <BackToTop />
+    </>
   );
 }
 

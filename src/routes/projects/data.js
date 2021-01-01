@@ -1,4 +1,6 @@
-import eatburgerIcon from "./assets/eat-burger.png";
+import eatburgerIcon from "./assets/eat_burger.png";
+import fbauthpagesIcon from "./assets/fb_auth_pages.png";
+import checkoutformIcon from "./assets/checkout-form.png";
 import spotifyIcon from "./assets/spotify.png";
 import katalogbukuIcon from "./assets/katalog-buku.png";
 import socmeddashboardIcon from "./assets/socmed-dashboard.png";
@@ -22,6 +24,26 @@ const PROJECT_LIST = [
   },
   {
     id: 2,
+    name: "Facebook Authentication Pages",
+    image: fbauthpagesIcon,
+    altImage: "Facebook Authentication Pages Screenshot",
+    repository: "https://github.com/ridoansaleh/fb_auth_pages",
+    deployment_status: "YES",
+    template: "CRA",
+    demo: "https://ridoansaleh.github.io/fb_auth_pages",
+  },
+  {
+    id: 3,
+    name: "Checkout Form",
+    image: checkoutformIcon,
+    altImage: "Checkout Form Screenshot",
+    repository: "https://github.com/ridoansaleh/checkout-form",
+    deployment_status: "YES",
+    template: "CRA TypeScript",
+    demo: "https://upbeat-spence-480994.netlify.app",
+  },
+  {
+    id: 4,
     name: "Spotify",
     image: spotifyIcon,
     altImage: "Spotify Screenshot",
@@ -31,7 +53,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/spotify",
   },
   {
-    id: 3,
+    id: 5,
     name: "Katalog Buku",
     image: katalogbukuIcon,
     altImage: "Katalog Buku Screenshot",
@@ -41,7 +63,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/katalog-buku",
   },
   {
-    id: 4,
+    id: 6,
     name: "Socmed Dashboard",
     image: socmeddashboardIcon,
     altImage: "Socmed Dashboard Screenshot",
@@ -51,7 +73,7 @@ const PROJECT_LIST = [
     demo: "https://socmed-dashboard.herokuapp.com/",
   },
   {
-    id: 5,
+    id: 7,
     name: "Jasa Keuangan",
     image: jasakeuanganIcon,
     altImage: "Jasa Keuangan Screenshot",
@@ -61,7 +83,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/jasa-keuangan/",
   },
   {
-    id: 6,
+    id: 8,
     name: "My Music",
     image: mymusicIcon,
     altImage: "My Music Screenshot",
@@ -71,7 +93,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/MyMusic/",
   },
   {
-    id: 7,
+    id: 9,
     name: "Learn Gatsby Formik",
     image: learngatsbyIcon,
     altImage: "Learn Gatsby Formik Screenshot",
@@ -81,7 +103,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/learn-gatsby-formik/",
   },
   {
-    id: 8,
+    id: 10,
     name: "Belajar React Redux",
     image: belajarreactreduxIcon,
     altImage: "Belajar React Redux Screenshot",
@@ -91,7 +113,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/belajar-react-redux/",
   },
   {
-    id: 9,
+    id: 11,
     name: "Vue Todo",
     image: vuetodoIcon,
     altImage: "Vue Todo Screenshot",
@@ -101,7 +123,7 @@ const PROJECT_LIST = [
     demo: "https://ridoansaleh.github.io/vue-todo/",
   },
   {
-    id: 10,
+    id: 12,
     name: "Doraemon",
     image: doraemonIcon,
     altImage: "Doraemon Screenshot",
@@ -112,8 +134,8 @@ const PROJECT_LIST = [
   },
 ];
 
-export const REACT_LIST = PROJECT_LIST.filter((d) => d.id !== 9);
+export const REACT_LIST = PROJECT_LIST.filter((d) => d.id !== 11);
 
-export const VUE_LIST = PROJECT_LIST.filter((d) => d.id === 9);
+export const VUE_LIST = PROJECT_LIST.filter((d) => d.id === 11);
 
 export default PROJECT_LIST;

@@ -51,6 +51,7 @@ export const ListItem = styled.div`
 
   > img {
     margin-bottom: 30px;
+    block-size: auto;
   }
   > div:nth-child(5) {
     margin-bottom: 20px;

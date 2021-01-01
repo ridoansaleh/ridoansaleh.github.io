@@ -34,7 +34,6 @@ import { SKILLS } from "./data";
 import { getElDistanceToTop } from "../../utils";
 
 function Main() {
-  const history = useHistory();
   const [skillsDistance, setSkillsDistance] = useState(0);
   const [contactDistance, setContactDistance] = useState(0);
   const [projectsDistance, setProjectsDistance] = useState(0);
@@ -43,6 +42,8 @@ function Main() {
   const [isContactPassed, setContactPassed] = useState(false);
   const [isProjectsPassed, setProjectsPassed] = useState(false);
   const [isFeedbackPassed, setFeedbackPassed] = useState(false);
+
+  const history = useHistory();
   const { setScroll } = useScrollup();
 
   useEffect(() => {
@@ -115,7 +116,7 @@ function Main() {
         <Name>Ridoan Saleh Nasution</Name>
         <Title>( Software Engineer )</Title>
         <Description>
-          He is a software engineer that has 3+ years of experience building
+          He is a software engineer that has 4+ years of experience building
           small to large modern web applications for reputable companies. His
           passion towards his works make him always keep up to the latest
           technologies in the community.
@@ -149,10 +150,11 @@ function Main() {
       </Skills>
       <Contact id="contact" isPassed={isContactPassed}>
         <Text>
-          Currently, he is working on a company as a Fullstack JavaScript
-          Developer. But, outside of his working hours and at the weekend he
-          would love to provides a service to create website for your personal
-          or company needs. He always open for other opportunity as well.
+          Currently, he is working on a company as a{" "}
+          <b>Fullstack JavaScript Developer</b>. But, outside of his working
+          hours and at the weekend he would love to provides a service to create
+          website for your personal or company needs. He always open for other
+          opportunity as well.
         </Text>
         <Text>Lets discuss more there!</Text>
         <ButtonGroup>
@@ -169,9 +171,9 @@ function Main() {
           of them are done.
         </Text>
         <Text>
-          All of them are his side project that he built while he was learning
-          and deepen his knowledge on it. He prefers not to include projects
-          that he had work from his current or previous companies.
+          All of them are his <b>side projects</b> that he built while he was
+          learning and deepen his knowledge on it. He prefers not to include
+          projects that he had work from his current or previous companies.
         </Text>
         <ProjectButton onClick={handleSeeProjectsClick}>
           See Projects
