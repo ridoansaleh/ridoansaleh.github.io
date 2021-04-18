@@ -21,7 +21,7 @@ function Projects() {
 
   useEffect(() => {
     setScroll(true);
-  }, []);
+  }, [setScroll]);
 
   const handleFilterChange = (e) => {
     const { value } = e.target;
