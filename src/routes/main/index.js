@@ -1,4 +1,9 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+} from "react";
 import { useHistory } from "react-router-dom";
 import {
   Profile,
@@ -46,11 +51,7 @@ function Main() {
   const history = useHistory();
   const { setScroll } = useScrollup();
 
-  useEffect(() => {
-    setScroll(true);
-  }, []);
-
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (window.innerHeight + window.scrollY > skillsDistance) {
       setSkillsPassed(true);
     }
@@ -63,21 +64,7 @@ function Main() {
     if (window.innerHeight + window.scrollY > feedbackDistance) {
       setFeedbackPassed(true);
     }
-  };
-
-  useLayoutEffect(() => {
-    setSkillsDistance(getElDistanceToTop("skills"));
-    setContactDistance(getElDistanceToTop("contact"));
-    setProjectsDistance(getElDistanceToTop("projects"));
-    setFeedbackDistance(getElDistanceToTop("feedback"));
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [contactDistance]);
+  }, [skillsDistance, contactDistance, projectsDistance, feedbackDistance]);
 
   const handleSeeProjectsClick = () => {
     history.push("/projects");
@@ -89,11 +76,11 @@ function Main() {
   };
 
   const handleTwitterClick = () => {
-    window.location.href = "https://twitter.com/Rido67720624";
+    window.location.href = "https://twitter.com/RidoanNS";
   };
 
   const handleMediumClick = () => {
-    window.location.href = "https://medium.com/@ridoansalehnst";
+    window.location.href = "https://ridoansalehnst.medium.com/";
   };
 
   const handleEmailClick = () => {
@@ -108,6 +95,24 @@ function Main() {
     window.location.href =
       "mailto:ridoansalehnasution98@gmail.com?subject=Feedback";
   };
+
+  useEffect(() => {
+    setScroll(true);
+  }, [setScroll]);
+
+  useLayoutEffect(() => {
+    setSkillsDistance(getElDistanceToTop("skills"));
+    setContactDistance(getElDistanceToTop("contact"));
+    setProjectsDistance(getElDistanceToTop("projects"));
+    setFeedbackDistance(getElDistanceToTop("feedback"));
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <>
