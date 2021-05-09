@@ -12,7 +12,7 @@ import {
   Link,
 } from "./_projectsStyle";
 import useScrollup from "../../hooks/useScrollup";
-import PROJECT_LIST, { REACT_LIST, VUE_LIST } from "./data";
+import PROJECT_LIST, { REACT_LIST, VUE_LIST, NODEJS_LIST } from "./data";
 
 function Projects() {
   const [filter, setFilter] = useState("");
@@ -32,6 +32,8 @@ function Projects() {
       setProjects(REACT_LIST);
     } else if (value === "Vue") {
       setProjects(VUE_LIST);
+    } else if (value === "Node.Js") {
+      setProjects(NODEJS_LIST);
     }
   };
 
@@ -43,15 +45,16 @@ function Projects() {
           <option value="Quality">Quality</option>
           <option value="React">React</option>
           <option value="Vue">Vue</option>
+          <option value="Node.Js">Node.Js</option>
         </Select>
       </Filter>
       <List>
         <ListTitle>PROJECTS</ListTitle>
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ListItem key={project.id}>
-            <ProjectName>{index + 1 + ". " + project.name}</ProjectName>
+            <ProjectName>{project.id + ". " + project.name}</ProjectName>
             <LazyLoadImage
-              alt={project.altImage}
+              alt={project.alt_image}
               height={200}
               src={project.image}
               width="100%"
