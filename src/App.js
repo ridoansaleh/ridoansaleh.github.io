@@ -1,4 +1,3 @@
-import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import CoreLayout from "./layout";
 import Main from "./routes/main";

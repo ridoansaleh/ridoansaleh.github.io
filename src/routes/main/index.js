@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useLayoutEffect,
-  useCallback,
-} from "react";
+import { useState, useEffect, useLayoutEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import {
   Profile,

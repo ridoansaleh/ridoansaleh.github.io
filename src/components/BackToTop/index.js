@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Icon } from "./_backToTopStyle";
 import arrowTopIcon from "./assets/up-arrow.svg";
 import { getElDistanceToTop } from "../../utils";
