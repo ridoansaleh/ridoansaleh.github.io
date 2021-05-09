@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aaf9239c.chunk.css",
-    "main.js": "/static/js/main.23e037e4.chunk.js",
+    "main.css": "/static/css/main.1b8c6584.chunk.css",
+    "main.js": "/static/js/main.42aa327d.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.82967d5a.js",
     "static/js/2.2bea3722.chunk.js": "/static/js/2.2bea3722.chunk.js",
     "index.html": "/index.html",
@@ -13,18 +13,21 @@
     "static/media/fb_auth_pages.b3af09a4.png": "/static/media/fb_auth_pages.b3af09a4.png",
     "static/media/jasa-keuangan.e750e2e9.png": "/static/media/jasa-keuangan.e750e2e9.png",
     "static/media/katalog-buku.324bfe85.png": "/static/media/katalog-buku.324bfe85.png",
+    "static/media/kuis-sumut.ba004d30.png": "/static/media/kuis-sumut.ba004d30.png",
     "static/media/learn-gatsby-formik.2b52ce2a.png": "/static/media/learn-gatsby-formik.2b52ce2a.png",
     "static/media/my-music.9d3323c7.png": "/static/media/my-music.9d3323c7.png",
     "static/media/profile.19cd3840.png": "/static/media/profile.19cd3840.png",
     "static/media/socmed-dashboard.a7ff2340.png": "/static/media/socmed-dashboard.a7ff2340.png",
     "static/media/spotify.282dfa33.png": "/static/media/spotify.282dfa33.png",
+    "static/media/staff-list-frontend.9783bd56.png": "/static/media/staff-list-frontend.9783bd56.png",
+    "static/media/staff-list-restapi.4a6b0479.png": "/static/media/staff-list-restapi.4a6b0479.png",
     "static/media/up-arrow.1eafd3ed.svg": "/static/media/up-arrow.1eafd3ed.svg",
     "static/media/vue-todo.e33af06c.png": "/static/media/vue-todo.e33af06c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.82967d5a.js",
     "static/js/2.2bea3722.chunk.js",
-    "static/css/main.aaf9239c.chunk.css",
-    "static/js/main.23e037e4.chunk.js"
+    "static/css/main.1b8c6584.chunk.css",
+    "static/js/main.42aa327d.chunk.js"
   ]
 }
