@@ -7,7 +7,7 @@ function Layout(props) {
     <>
       <div className="page">
         <Header />
-        <main>{props.children()}</main>
+        <main>{props.children}</main>
         <Footer />
       </div>
       <BackToTop />
