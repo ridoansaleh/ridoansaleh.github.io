@@ -8,10 +8,10 @@ function App() {
     <HashRouter>
       <Switch>
         <Route path="/" exact>
-          <CoreLayout children={Main} />
+          <CoreLayout children={<Main />} />
         </Route>
         <Route path="/projects">
-          <CoreLayout children={Projects} />
+          <CoreLayout children={<Projects />} />
         </Route>
       </Switch>
     </HashRouter>

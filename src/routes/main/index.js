@@ -118,7 +118,7 @@ function Main() {
         <Description>
           He is a software engineer that has 4+ years of experience building
           small to large modern web applications for reputable companies. His
-          passion towards his works make him always keep up to the latest
+          passion for his works makes him always keep up with the latest
           technologies in the community.
         </Description>
         <Socials>
@@ -139,7 +139,7 @@ function Main() {
       <Skills id="skills" isPassed={isSkillsPassed}>
         <SkillsTitle>Skills</SkillsTitle>
         <Text>
-          These are the skills that he has acquired along of his journey as a
+          These are the skills that he has acquired along his journey as a
           Software Engineer.
         </Text>
         {SKILLS.map((skill) => (
@@ -151,12 +151,11 @@ function Main() {
       <Contact id="contact" isPassed={isContactPassed}>
         <Text>
           Currently, he is working on a company as a{" "}
-          <b>Fullstack JavaScript Developer</b>. But, outside of his working
-          hours and at the weekend he would love to provides a service to create
-          website for your personal or company needs. He always open for other
-          opportunity as well.
+          <b>Fullstack JavaScript Developer</b>. Outside of his working hours,
+          he provides a service to create a website for your personal or company
+          needs. He always opens to other opportunities as well.
         </Text>
-        <Text>Lets discuss more there!</Text>
+        <Text>Let's discuss more there!</Text>
         <ButtonGroup>
           <EmailButton onClick={handleEmailClick}>Email</EmailButton>
           <WhatsAppButton onClick={handleWhatsAppClick}>
