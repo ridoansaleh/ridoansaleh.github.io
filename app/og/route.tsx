@@ -1,9 +1,11 @@
+
 import { ImageResponse } from "next/og";
 import { metaData } from "app/config";
 
-export function GET(request: Request) {
-  let url = new URL(request.url);
-  let title = url.searchParams.get("title") || metaData.title;
+export const dynamic = "force-static";
+
+export function GET() {
+  const title = metaData.title;
 
   return new ImageResponse(
     (

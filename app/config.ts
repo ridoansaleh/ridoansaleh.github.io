@@ -12,5 +12,5 @@ export const socialLinks = {
   github: "https://github.com/ridoansaleh",
   instagram: "https://www.instagram.com/",
   linkedin: "https://www.linkedin.com/in/ridoansalehnasution/",
-  email: "mailto:ridoansalehnasution98@gmail.com",
+  email: "mailto:ridoansalehnasution@gmail.com",
 };
