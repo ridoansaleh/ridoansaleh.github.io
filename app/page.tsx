@@ -1,5 +1,3 @@
-
-import Link from "next/link";
 import { socialLinks } from "./config";
 
 const technologies = [
@@ -13,14 +11,45 @@ const technologies = [
   "Git",
 ];
 
+const doerscircleTechnologies = ["Nuxt", "Vue.js", "PostgreSQL", "Stripe"];
+
+const contributions = [
+  "Implemented the revamped user dashboard.",
+  "Developed Team Account features, enabling users to create teams, invite and manage members, and assign or remove solutions.",
+  "Developed the referral feature.",
+  "Revamped the onboarding flow, including signup, login, email verification, and survey pages.",
+  "Identified and fixed bugs to improve application reliability.",
+  "Collaborated with UI/UX Designers and the Tech Lead to deliver new features.",
+  "Provided technical support and guidance to team members during development and debugging.",
+];
+
+
+const aiaContributions = [
+  "Developed ClaimsEZ, a web application built with React on top of Adobe Experience Manager (AEM).",
+  "Designed and structured the ClaimsEZ project architecture to improve scalability and maintainability.",
+  "Developed iPosX, a hybrid Point of Sales application using Vue.js, TypeScript, and Cordova.",
+  "Implemented unit testing for the iPosX application.",
+  "Created reusable UI components across React and Vue.js applications.",
+  "Documented application workflows and processes in Jira.",
+  "Collaborated with Product Managers, Backend Developers, and Frontend Developers to deliver new features.",
+  "Mentored Junior Frontend Developers and conducted regular knowledge-sharing sessions.",
+];
+
+const aiaTechnologies = [
+  "React",
+  "Adobe Experience Manager",
+  "Vue.js",
+  "TypeScript",
+  "Cordova",
+  "Jira",
+];
+
 export default function Page() {
   return (
     <div className="space-y-24">
       {/* Hero */}
       <section className="relative pt-20 sm:pt-28">
-        <p className="mb-5 font-mono text-sm text-blue-500">
-          Hello, world! 👋
-        </p>
+        <p className="mb-5 font-mono text-sm text-blue-500">Hello, world! 👋</p>
 
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
           I'm Ridoan Saleh.
@@ -30,9 +59,8 @@ export default function Page() {
         </h1>
 
         <p className="mt-8 max-w-xl text-base leading-8 text-neutral-600 dark:text-neutral-400">
-          I build modern web applications with thoughtful design,
-          reliable architecture, and a focus on creating meaningful
-          digital experiences.
+          I build modern web applications with thoughtful design, reliable
+          architecture, and a focus on creating meaningful digital experiences.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
@@ -74,27 +102,22 @@ export default function Page() {
 
       {/* About */}
       <section id="about">
-        <p className="mb-3 font-mono text-sm text-blue-500">
-          01 / ABOUT
-        </p>
+        <p className="mb-3 font-mono text-sm text-blue-500">01 / ABOUT</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
           A little about me
         </h2>
 
         <p className="mt-5 max-w-2xl leading-8 text-neutral-600 dark:text-neutral-400">
-          I'm a developer passionate about building applications
-          from the user interface to the server-side logic.
-          I enjoy learning new technologies, solving problems,
-          and turning ideas into working products.
+          I'm a developer passionate about building applications from the user
+          interface to the server-side logic. I enjoy learning new technologies,
+          solving problems, and turning ideas into working products.
         </p>
       </section>
 
       {/* Tech Stack */}
       <section id="stack">
-        <p className="mb-3 font-mono text-sm text-blue-500">
-          02 / TECH STACK
-        </p>
+        <p className="mb-3 font-mono text-sm text-blue-500">02 / TECH STACK</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
           Tools I work with
@@ -112,42 +135,156 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Selected Work */}
       <section id="projects">
         <p className="mb-3 font-mono text-sm text-blue-500">
-          03 / PROJECTS
+          03 / SELECTED WORK
         </p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
-          Selected work
+          Professional projects
         </h2>
 
         <p className="mt-5 max-w-xl leading-8 text-neutral-600 dark:text-neutral-400">
-          A collection of projects that showcase my skills
-          in frontend development, backend systems, and
-          full-stack application development.
+          A selection of professional work, product features, and engineering
+          contributions from my experience as a Full-Stack Developer.
         </p>
 
-        <div className="mt-6 rounded-xl border border-dashed border-neutral-300 p-6 dark:border-neutral-800">
-          <p className="text-sm text-neutral-500">
-            Projects coming soon.
-          </p>
-        </div>
+        {/* Doerscircle Project */}
+        <article className="mt-8 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+          <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
+                Professional Experience
+              </span>
+
+              <span className="font-mono text-xs text-neutral-500">
+                Nov 2022 — Jan 2025
+              </span>
+            </div>
+
+            <h3 className="mt-5 text-3xl font-semibold tracking-tight">
+              Doerscircle
+            </h3>
+
+            <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+              Senior Full-Stack JavaScript Developer
+            </p>
+
+            <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
+              Contributed to the development and improvement of the Doerscircle
+              platform, focusing on user experience, team collaboration
+              features, onboarding, and product functionality.
+            </p>
+          </div>
+
+          <div className="p-6 sm:p-8">
+            <h4 className="text-sm font-semibold">Key Contributions</h4>
+
+            <ul className="mt-4 space-y-3">
+              {contributions.map((contribution) => (
+                <li
+                  key={contribution}
+                  className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
+                >
+                  <span className="shrink-0 text-blue-500 leading-7">▹</span>
+                  <span>{contribution}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+              <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                Technologies
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {doerscircleTechnologies.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
+
+        {/* AIA Singapore Project */}
+        <article className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+          <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
+                Professional Experience
+              </span>
+
+              <span className="font-mono text-xs text-neutral-500">
+                Oct 2019 — Nov 2022
+              </span>
+            </div>
+
+            <h3 className="mt-5 text-3xl font-semibold tracking-tight">
+              AIA Singapore
+            </h3>
+
+            <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+              Senior Frontend Developer
+            </p>
+
+            <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
+              Worked on enterprise web and hybrid applications, contributing to
+              frontend architecture, reusable UI components, testing, and
+              cross-functional product development.
+            </p>
+          </div>
+
+          <div className="p-6 sm:p-8">
+            <h4 className="text-sm font-semibold">Key Contributions</h4>
+
+            <ul className="mt-4 space-y-3">
+              {aiaContributions.map((contribution) => (
+                <li
+                  key={contribution}
+                  className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
+                >
+                  <span className="shrink-0 text-blue-500 leading-7">▹</span>
+                  <span>{contribution}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+              <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                Technologies
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {aiaTechnologies.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
 
       {/* Contact */}
       <section id="contact">
-        <p className="mb-3 font-mono text-sm text-blue-500">
-          04 / CONTACT
-        </p>
+        <p className="mb-3 font-mono text-sm text-blue-500">04 / CONTACT</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
           Let's build something together.
         </h2>
 
         <p className="mt-5 max-w-xl leading-8 text-neutral-600 dark:text-neutral-400">
-          Have an idea, a project, or an opportunity?
-          I'd love to hear from you.
+          Have an idea, a project, or an opportunity? I'd love to hear from you.
         </p>
 
         <a
