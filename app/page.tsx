@@ -11,9 +11,24 @@ const technologies = [
   "Git",
 ];
 
+const xtremaxContributions = [
+  "Developed Upload and Download APIs to support authenticated download links in email attachments.",
+  "Migrated two micro-frontend applications from Vue 2 to Vue 3.",
+  "Developed ROOTs 3.0 using Next.js and Directus.",
+];
+
+const xtremaxTechnologies = [
+  "Next.js",
+  "Directus",
+  "Vue 2",
+  "Vue 3",
+  "Micro-Frontend",
+  "REST API",
+];
+
 const doerscircleTechnologies = ["Nuxt", "Vue.js", "PostgreSQL", "Stripe"];
 
-const contributions = [
+const doerscircleContributions = [
   "Implemented the revamped user dashboard.",
   "Developed Team Account features, enabling users to create teams, invite and manage members, and assign or remove solutions.",
   "Developed the referral feature.",
@@ -22,7 +37,6 @@ const contributions = [
   "Collaborated with UI/UX Designers and the Tech Lead to deliver new features.",
   "Provided technical support and guidance to team members during development and debugging.",
 ];
-
 
 const aiaContributions = [
   "Developed ClaimsEZ, a web application built with React on top of Adobe Experience Manager (AEM).",
@@ -147,34 +161,34 @@ export default function Page() {
 
         <p className="mt-5 max-w-xl leading-8 text-neutral-600 dark:text-neutral-400">
           A selection of professional work, product features, and engineering
-          contributions from my experience as a Full-Stack Developer.
+          contributions from my experience as a Software Developer.
         </p>
 
-        {/* Doerscircle Project */}
-        <article className="mt-8 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+        {/* Xtremax - Featured Work */}
+        <article className="mt-8 mb-6 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
           <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
-                Professional Experience
+                Current Experience
               </span>
 
               <span className="font-mono text-xs text-neutral-500">
-                Nov 2022 — Jan 2025
+                Apr 2026 — Present
               </span>
             </div>
 
             <h3 className="mt-5 text-3xl font-semibold tracking-tight">
-              Doerscircle
+              Xtremax
             </h3>
 
             <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-              Senior Full-Stack JavaScript Developer
+              Senior Software Developer
             </p>
 
             <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
-              Contributed to the development and improvement of the Doerscircle
-              platform, focusing on user experience, team collaboration
-              features, onboarding, and product functionality.
+              Contributing to software development through API development,
+              micro-frontend modernization, and building web applications with
+              modern technologies.
             </p>
           </div>
 
@@ -182,12 +196,12 @@ export default function Page() {
             <h4 className="text-sm font-semibold">Key Contributions</h4>
 
             <ul className="mt-4 space-y-3">
-              {contributions.map((contribution) => (
+              {xtremaxContributions.map((contribution) => (
                 <li
                   key={contribution}
                   className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
                 >
-                  <span className="shrink-0 text-blue-500 leading-7">▹</span>
+                  <span className="shrink-0 leading-7 text-blue-500">▹</span>
                   <span>{contribution}</span>
                 </li>
               ))}
@@ -199,7 +213,7 @@ export default function Page() {
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                {doerscircleTechnologies.map((technology) => (
+                {xtremaxTechnologies.map((technology) => (
                   <span
                     key={technology}
                     className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
@@ -212,67 +226,148 @@ export default function Page() {
           </div>
         </article>
 
-        {/* AIA Singapore Project */}
-        <article className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
-          <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
-                Professional Experience
-              </span>
+        {/* More Selected Work */}
+        <details className="group flex flex-col">
+          <summary className="order-2 flex cursor-pointer list-none items-center justify-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900 [&::-webkit-details-marker]:hidden">
+            <span className="group-open:hidden">Show More</span>
 
-              <span className="font-mono text-xs text-neutral-500">
-                Oct 2019 — Nov 2022
-              </span>
-            </div>
+            <span className="hidden group-open:inline">Show Less</span>
 
-            <h3 className="mt-5 text-3xl font-semibold tracking-tight">
-              AIA Singapore
-            </h3>
+            <span className="transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
 
-            <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-              Senior Frontend Developer
-            </p>
-
-            <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
-              Worked on enterprise web and hybrid applications, contributing to
-              frontend architecture, reusable UI components, testing, and
-              cross-functional product development.
-            </p>
-          </div>
-
-          <div className="p-6 sm:p-8">
-            <h4 className="text-sm font-semibold">Key Contributions</h4>
-
-            <ul className="mt-4 space-y-3">
-              {aiaContributions.map((contribution) => (
-                <li
-                  key={contribution}
-                  className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
-                >
-                  <span className="shrink-0 text-blue-500 leading-7">▹</span>
-                  <span>{contribution}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
-              <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
-                Technologies
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {aiaTechnologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
-                  >
-                    {technology}
+          <div className="order-1 mb-6 space-y-6">
+            {/* Doerscircle */}
+            <article className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+              <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
+                    Professional Experience
                   </span>
-                ))}
+
+                  <span className="font-mono text-xs text-neutral-500">
+                    Nov 2022 — Jan 2025
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-3xl font-semibold tracking-tight">
+                  Doerscircle
+                </h3>
+
+                <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+                  Senior Full-Stack JavaScript Developer
+                </p>
+
+                <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
+                  Contributed to the development and improvement of the
+                  Doerscircle platform, focusing on user experience, team
+                  collaboration features, onboarding, and product functionality.
+                </p>
               </div>
-            </div>
+
+              <div className="p-6 sm:p-8">
+                <h4 className="text-sm font-semibold">Key Contributions</h4>
+
+                <ul className="mt-4 space-y-3">
+                  {doerscircleContributions.map((contribution) => (
+                    <li
+                      key={contribution}
+                      className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
+                    >
+                      <span className="shrink-0 leading-7 text-blue-500">
+                        ▹
+                      </span>
+                      <span>{contribution}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+                  <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                    Technologies
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {doerscircleTechnologies.map((technology) => (
+                      <span
+                        key={technology}
+                        className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            {/* AIA Singapore */}
+            <article className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+              <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
+                    Professional Experience
+                  </span>
+
+                  <span className="font-mono text-xs text-neutral-500">
+                    Oct 2019 — Nov 2022
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-3xl font-semibold tracking-tight">
+                  AIA Singapore
+                </h3>
+
+                <p className="mt-2 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+                  Senior Frontend Developer
+                </p>
+
+                <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
+                  Worked on enterprise web and hybrid applications, contributing
+                  to frontend architecture, reusable UI components, testing, and
+                  cross-functional product development.
+                </p>
+              </div>
+
+              <div className="p-6 sm:p-8">
+                <h4 className="text-sm font-semibold">Key Contributions</h4>
+
+                <ul className="mt-4 space-y-3">
+                  {aiaContributions.map((contribution) => (
+                    <li
+                      key={contribution}
+                      className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
+                    >
+                      <span className="shrink-0 leading-7 text-blue-500">
+                        ▹
+                      </span>
+                      <span>{contribution}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+                  <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                    Technologies
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {aiaTechnologies.map((technology) => (
+                      <span
+                        key={technology}
+                        className="rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-300"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
-        </article>
+        </details>
       </section>
 
       {/* Contact */}
