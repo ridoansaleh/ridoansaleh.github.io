@@ -38,6 +38,38 @@ html {
   min-width: 360px;
 }
 
+.indonesia-map {
+  position: fixed;
+  left: 50%;
+  bottom: 5vh;
+  z-index: 0;
+  width: min(96vw, 1100px);
+  height: auto;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.dark .indonesia-map {
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.14;
+}
+
+@media (max-width: 640px) {
+  .indonesia-map {
+    z-index: 1;
+    width: 100vw;
+    bottom: 4vh;
+    opacity: 0.2;
+  }
+
+  .dark .indonesia-map {
+    opacity: 0.22;
+  }
+}
+
 .prose {
   @apply text-[#333333] dark:text-[#D4D4D4];
 }

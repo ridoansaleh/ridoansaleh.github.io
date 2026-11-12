@@ -60,7 +60,15 @@ const aiaTechnologies = [
 
 export default function Page() {
   return (
-    <div className="space-y-24">
+    <>
+      <img
+        className="indonesia-map"
+        src="/indonesia-map.jpg"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 space-y-24">
       {/* Hero */}
       <section className="relative pt-20 sm:pt-28">
         <p className="mb-5 font-mono text-sm text-blue-500">Hello, world! 👋</p>
@@ -389,6 +397,7 @@ export default function Page() {
           {socialLinks.email.replace("mailto:", "")} ↗
         </a>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
