@@ -86,10 +86,10 @@ export default function Page() {
           </a>
 
           <a
-            href="#projects"
+            href="#experience"
             className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
           >
-            View projects ↓
+            View experience ↓
           </a>
         </div>
 
@@ -150,7 +150,7 @@ export default function Page() {
       </section>
 
       {/* Selected Work */}
-      <section id="projects">
+      <section id="experience">
         <p className="mb-3 font-mono text-sm text-blue-500">
           03 / SELECTED WORK
         </p>

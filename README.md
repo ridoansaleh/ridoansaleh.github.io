@@ -1,62 +1,50 @@
-# Nextfolio
+# Ridoan Saleh — Portfolio
 
-A clean, fast, and lightweight portfolio template built with [Next.js](https://nextjs.org/), [Vercel](https://vercel.com/), and [Tailwind CSS](https://tailwindcss.com/) for optimal performance.
+Personal portfolio website for Ridoan Saleh, built with Next.js, React, TypeScript, and Tailwind CSS. The site is configured as a static export and contains an introduction, professional experience, skills, and a photo gallery.
 
-Deploy your Nextfolio site with Vercel in minutes.
+## Pages
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
+- `/` — introduction, skills, and professional experience
+- `/photos/` — photo gallery, maintained in `app/photos/page.tsx`
 
-## Technologies Used
+The site also generates `sitemap.xml`, `robots.txt`, and an Open Graph image route as part of the Next.js app.
 
-- Framework: [Next.js](https://nextjs.org/)
-- Typography: [Vercel Geist Font](https://vercel.com/font)
-- Styling: [Tailwind CSS](https://tailwindcss.com/)
-- Analytics: [Vercel Web Analytics](https://vercel.com/docs/speed-insights) and [Speed Insights](https://vercel.com/docs/speed-insights)
-- Deployment: [Vercel](https://vercel.com/)
+## Requirements
 
-## Features
+- Node.js
+- pnpm
 
-- **[MDX](https://mdxjs.com/) Support**: Use Markdown with JSX components for blog posts.
-- **Light and Dark Mode Toggle**: Switch between themes for better readability.
-- **Dynamic [OG Images](https://vercel.com/docs/functions/og-image-generation)**: Auto-generate Open Graph images for sharing.
-- **SEO Optimization**: Enhance search visibility with sitemap, robots.txt, and JSON-LD schema.
-- **Dynamic Feed Generation**: Automatic dynamic [RSS](https://nextfolio-template.vercel.app/rss.xml), [Atom](https://nextfolio-template.vercel.app/atom.xml), and [JSON](https://nextfolio-template.vercel.app/feed.json) feeds.
-- **[KaTeX](https://katex.org/) Integration**: Render mathematical expressions smoothly.
-- **Performance Tracking**: Monitor web performance with [Vercel Web Analytics](https://vercel.com/docs/speed-insights) and [Speed Insights](https://vercel.com/docs/speed-insights).
-- **Interactive Embeds**: Easily embed interactive tweets and YouTube videos.
-- **Captions**: Add descriptive captions to photos, tweets, and videos.
-- **Image Grid**: Easily showcase image galleries or photos.
+Install dependencies and start the local development server:
 
-## Installation
-
-Nextfolio uses [pnpm](https://pnpm.io/installation) for dependency management, so ensure it is installed on your system.
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```
-pnpm create next-app --example https://github.com/1msirius/Nextfolio my-portfolio
-```
-
-Start the development server:
-
-```
+```bash
+pnpm install
 pnpm dev
 ```
 
-The server will be running at [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000).
 
-## Configuration
+## Build
 
-1. Update the site metadata and social links in `app/config.ts` to set up SEO, feeds, social links, and Open Graph settings.
-2. Update your routes in `app/sitemap.ts` for SEO optimization.
-3. Update your blog posts in the `/content` folder.
+Create the production static export:
 
-For more information about configuration, follow the instructions in the [Getting Started](https://nextfolio-template.vercel.app/blog/getting-started#configuration) post.
+```bash
+pnpm build
+```
 
-## Contributing
+The exported site is written to `out/`. Serve that directory with a static web host. The Next.js configuration enables static export, trailing slashes, and unoptimized images for static hosting.
 
-Contributions are welcome! To get involved, just push your code to the repo. Whether you're enhancing existing features or adding new ones, your efforts are greatly appreciated!
+## Updating the portfolio
 
-## Licence
+- Edit the homepage content and experience in `app/page.tsx`.
+- Edit site metadata, canonical base URL, and social links in `app/config.ts`.
+- Update gallery images and captions in `app/photos/page.tsx`; place image files under `public/photos/`.
+- Replace profile, logo, and social preview assets in `public/` as needed.
 
-Nextfolio is open-source and released under the MIT License.
+## Tech stack
+
+- [Next.js](https://nextjs.org/) App Router with static export
+- [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Geist](https://vercel.com/font) fonts
+- [next-themes](https://github.com/pacocoursey/next-themes) for light and dark themes
+
