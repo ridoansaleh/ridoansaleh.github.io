@@ -1,10 +1,10 @@
 export const metaData = {
   baseUrl: "https://ridoansaleh.github.io/",
-  title: "Portfolio",
+  title: "Ridoan Saleh | Full-Stack Developer",
   name: "Ridoan Saleh",
   ogImage: "/opengraph-image.png",
   description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.",
+    "Ridoan Saleh is a full-stack developer who builds modern web applications with thoughtful design, reliable architecture, and meaningful user experiences.",
 };
 
 export const socialLinks = {

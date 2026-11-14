@@ -9,13 +9,35 @@ import { metaData } from "./config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
+  applicationName: metaData.name,
   title: {
     default: metaData.title,
-    template: `%s | ${metaData.title}`,
+    template: `%s | ${metaData.name}`,
   },
   description: metaData.description,
+  keywords: [
+    "Ridoan Saleh",
+    "Full-Stack Developer",
+    "Web Development",
+    "Next.js",
+    "React",
+    "TypeScript",
+  ],
+  authors: [{ name: metaData.name, url: metaData.baseUrl }],
+  creator: metaData.name,
+  publisher: metaData.name,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    images: metaData.ogImage,
+    images: [
+      {
+        url: metaData.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${metaData.name} — Full-Stack Developer portfolio`,
+      },
+    ],
     title: metaData.title,
     description: metaData.description,
     url: metaData.baseUrl,
@@ -35,8 +57,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: metaData.name,
     card: "summary_large_image",
+    title: metaData.title,
+    description: metaData.description,
+    images: [metaData.ogImage],
   },
   icons: {
     icon: "/favicon.ico",
