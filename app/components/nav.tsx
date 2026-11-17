@@ -4,16 +4,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
-
-const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#stack", label: "Stack" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-];
+import { LanguageSwitch, useLanguage } from "./language";
+import { t } from "app/translations";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const navItems = [
+    { href: "#about", label: t(language, "navAbout") },
+    { href: "#stack", label: t(language, "navStack") },
+    { href: "#experience", label: t(language, "navExperience") },
+    { href: "#contact", label: t(language, "navContact") },
+  ];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/80 py-5 backdrop-blur-md dark:border-neutral-800/70 dark:bg-[#121212]/80">
@@ -28,7 +30,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <div className="flex items-center gap-5 text-sm text-neutral-600 dark:text-neutral-400">
             {navItems.map((item) => (
               <Link
@@ -42,12 +44,16 @@ export function Navbar() {
           </div>
 
           <div className="border-l border-neutral-200 pl-4 dark:border-neutral-700">
-            <ThemeSwitch />
+            <div className="flex items-center gap-3">
+              <LanguageSwitch />
+              <ThemeSwitch />
+            </div>
           </div>
         </div>
 
         {/* Mobile Controls */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
+          <LanguageSwitch />
           <ThemeSwitch />
 
           <button
@@ -98,7 +104,7 @@ export function Navbar() {
       {isOpen && (
         <div
           id="mobile-navigation"
-          className="absolute left-0 right-0 top-full border-b border-neutral-200 bg-white px-6 py-4 shadow-lg dark:border-neutral-800 dark:bg-[#121212] md:hidden"
+          className="absolute left-0 right-0 top-full border-b border-neutral-200 bg-white px-6 py-4 shadow-lg dark:border-neutral-800 dark:bg-[#121212] lg:hidden"
         >
           <div className="flex flex-col">
             {navItems.map((item) => (

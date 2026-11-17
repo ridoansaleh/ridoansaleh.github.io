@@ -1,4 +1,8 @@
+"use client";
+
 import { socialLinks } from "./config";
+import { useLanguage } from "./components/language";
+import { t } from "./translations";
 
 const technologies = [
   "Next.js",
@@ -9,12 +13,6 @@ const technologies = [
   "REST API",
   "PostgreSQL",
   "Git",
-];
-
-const xtremaxContributions = [
-  "Developed Upload and Download APIs to support authenticated download links in email attachments.",
-  "Migrated two micro-frontend applications from Vue 2 to Vue 3.",
-  "Developed ROOTs 3.0 using Next.js and Directus.",
 ];
 
 const xtremaxTechnologies = [
@@ -28,27 +26,6 @@ const xtremaxTechnologies = [
 
 const doerscircleTechnologies = ["Nuxt", "Vue.js", "PostgreSQL", "Stripe"];
 
-const doerscircleContributions = [
-  "Implemented the revamped user dashboard.",
-  "Developed Team Account features, enabling users to create teams, invite and manage members, and assign or remove solutions.",
-  "Developed the referral feature.",
-  "Revamped the onboarding flow, including signup, login, email verification, and survey pages.",
-  "Identified and fixed bugs to improve application reliability.",
-  "Collaborated with UI/UX Designers and the Tech Lead to deliver new features.",
-  "Provided technical support and guidance to team members during development and debugging.",
-];
-
-const aiaContributions = [
-  "Developed ClaimsEZ, a web application built with React on top of Adobe Experience Manager (AEM).",
-  "Designed and structured the ClaimsEZ project architecture to improve scalability and maintainability.",
-  "Developed iPosX, a hybrid Point of Sales application using Vue.js, TypeScript, and Cordova.",
-  "Implemented unit testing for the iPosX application.",
-  "Created reusable UI components across React and Vue.js applications.",
-  "Documented application workflows and processes in Jira.",
-  "Collaborated with Product Managers, Backend Developers, and Frontend Developers to deliver new features.",
-  "Mentored Junior Frontend Developers and conducted regular knowledge-sharing sessions.",
-];
-
 const aiaTechnologies = [
   "React",
   "Adobe Experience Manager",
@@ -59,6 +36,7 @@ const aiaTechnologies = [
 ];
 
 export default function Page() {
+  const { language } = useLanguage();
   return (
     <>
       <img
@@ -71,18 +49,17 @@ export default function Page() {
       <div className="relative z-10 space-y-24">
       {/* Hero */}
       <section className="relative pt-20 sm:pt-28">
-        <p className="mb-5 font-mono text-sm text-blue-500">Hello, world! 👋</p>
+        <p className="mb-5 font-mono text-sm text-blue-500">{t(language, "greeting")}</p>
 
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
           I'm Ridoan Saleh.
           <span className="mt-2 block text-neutral-500">
-            Full-Stack Developer
+            {t(language, "role")}
           </span>
         </h1>
 
         <p className="mt-8 max-w-xl text-base leading-8 text-neutral-600 dark:text-neutral-400">
-          I build modern web applications with thoughtful design, reliable
-          architecture, and a focus on creating meaningful digital experiences.
+          {t(language, "intro")}
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
@@ -90,14 +67,14 @@ export default function Page() {
             href={socialLinks.email}
             className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
           >
-            Get in touch ↗
+            {t(language, "getInTouch")}
           </a>
 
           <a
             href="#experience"
             className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
           >
-            View experience ↓
+            {t(language, "viewExperience")}
           </a>
         </div>
 
@@ -124,25 +101,23 @@ export default function Page() {
 
       {/* About */}
       <section id="about">
-        <p className="mb-3 font-mono text-sm text-blue-500">01 / ABOUT</p>
+        <p className="mb-3 font-mono text-sm text-blue-500">{t(language, "aboutLabel")}</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
-          A little about me
+          {t(language, "aboutTitle")}
         </h2>
 
         <p className="mt-5 max-w-2xl leading-8 text-neutral-600 dark:text-neutral-400">
-          I'm a developer passionate about building applications from the user
-          interface to the server-side logic. I enjoy learning new technologies,
-          solving problems, and turning ideas into working products.
+          {t(language, "aboutText")}
         </p>
       </section>
 
       {/* Tech Stack */}
       <section id="stack">
-        <p className="mb-3 font-mono text-sm text-blue-500">02 / TECH STACK</p>
+        <p className="mb-3 font-mono text-sm text-blue-500">{t(language, "stackLabel")}</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
-          Tools I work with
+          {t(language, "stackTitle")}
         </h2>
 
         <div className="mt-6 flex flex-wrap gap-3">
@@ -160,16 +135,15 @@ export default function Page() {
       {/* Selected Work */}
       <section id="experience">
         <p className="mb-3 font-mono text-sm text-blue-500">
-          03 / SELECTED WORK
+          {t(language, "workLabel")}
         </p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
-          Professional projects
+          {t(language, "workTitle")}
         </h2>
 
         <p className="mt-5 max-w-xl leading-8 text-neutral-600 dark:text-neutral-400">
-          A selection of professional work, product features, and engineering
-          contributions from my experience as a Software Developer.
+          {t(language, "workIntro")}
         </p>
 
         {/* Xtremax - Featured Work */}
@@ -177,7 +151,7 @@ export default function Page() {
           <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
-                Current Experience
+                {t(language, "current")}
               </span>
 
               <span className="font-mono text-xs text-neutral-500">
@@ -194,17 +168,15 @@ export default function Page() {
             </p>
 
             <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
-              Contributing to software development through API development,
-              micro-frontend modernization, and building web applications with
-              modern technologies.
+              {t(language, "xtremaxSummary")}
             </p>
           </div>
 
           <div className="p-6 sm:p-8">
-            <h4 className="text-sm font-semibold">Key Contributions</h4>
+            <h4 className="text-sm font-semibold">{t(language, "contributions")}</h4>
 
             <ul className="mt-4 space-y-3">
-              {xtremaxContributions.map((contribution) => (
+              {t(language, "xtremaxItems").map((contribution) => (
                 <li
                   key={contribution}
                   className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
@@ -217,7 +189,7 @@ export default function Page() {
 
             <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
               <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
-                Technologies
+                {t(language, "technologies")}
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">
@@ -237,9 +209,9 @@ export default function Page() {
         {/* More Selected Work */}
         <details className="group flex flex-col">
           <summary className="order-2 flex cursor-pointer list-none items-center justify-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900 [&::-webkit-details-marker]:hidden">
-            <span className="group-open:hidden">Show More</span>
+            <span className="group-open:hidden">{t(language, "showMore")}</span>
 
-            <span className="hidden group-open:inline">Show Less</span>
+            <span className="hidden group-open:inline">{t(language, "showLess")}</span>
 
             <span className="transition-transform group-open:rotate-180">
               ↓
@@ -252,7 +224,7 @@ export default function Page() {
               <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
-                    Professional Experience
+                    {t(language, "professional")}
                   </span>
 
                   <span className="font-mono text-xs text-neutral-500">
@@ -269,17 +241,15 @@ export default function Page() {
                 </p>
 
                 <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
-                  Contributed to the development and improvement of the
-                  Doerscircle platform, focusing on user experience, team
-                  collaboration features, onboarding, and product functionality.
+                  {t(language, "doerscircleSummary")}
                 </p>
               </div>
 
               <div className="p-6 sm:p-8">
-                <h4 className="text-sm font-semibold">Key Contributions</h4>
+                <h4 className="text-sm font-semibold">{t(language, "contributions")}</h4>
 
                 <ul className="mt-4 space-y-3">
-                  {doerscircleContributions.map((contribution) => (
+                  {t(language, "doerscircleItems").map((contribution) => (
                     <li
                       key={contribution}
                       className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
@@ -294,7 +264,7 @@ export default function Page() {
 
                 <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
                   <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
-                    Technologies
+                    {t(language, "technologies")}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -316,7 +286,7 @@ export default function Page() {
               <div className="border-b border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500">
-                    Professional Experience
+                    {t(language, "professional")}
                   </span>
 
                   <span className="font-mono text-xs text-neutral-500">
@@ -333,17 +303,15 @@ export default function Page() {
                 </p>
 
                 <p className="mt-4 max-w-2xl leading-7 text-neutral-600 dark:text-neutral-400">
-                  Worked on enterprise web and hybrid applications, contributing
-                  to frontend architecture, reusable UI components, testing, and
-                  cross-functional product development.
+                  {t(language, "aiaSummary")}
                 </p>
               </div>
 
               <div className="p-6 sm:p-8">
-                <h4 className="text-sm font-semibold">Key Contributions</h4>
+                <h4 className="text-sm font-semibold">{t(language, "contributions")}</h4>
 
                 <ul className="mt-4 space-y-3">
-                  {aiaContributions.map((contribution) => (
+                  {t(language, "aiaItems").map((contribution) => (
                     <li
                       key={contribution}
                       className="flex items-start gap-3 text-sm leading-7 text-neutral-600 dark:text-neutral-400"
@@ -358,7 +326,7 @@ export default function Page() {
 
                 <div className="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-800">
                   <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
-                    Technologies
+                    {t(language, "technologies")}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -380,14 +348,14 @@ export default function Page() {
 
       {/* Contact */}
       <section id="contact">
-        <p className="mb-3 font-mono text-sm text-blue-500">04 / CONTACT</p>
+        <p className="mb-3 font-mono text-sm text-blue-500">{t(language, "contactLabel")}</p>
 
         <h2 className="text-2xl font-semibold tracking-tight">
-          Let's build something together.
+          {t(language, "contactTitle")}
         </h2>
 
         <p className="mt-5 max-w-xl leading-8 text-neutral-600 dark:text-neutral-400">
-          Have an idea, a project, or an opportunity? I'd love to hear from you.
+          {t(language, "contactText")}
         </p>
 
         <a

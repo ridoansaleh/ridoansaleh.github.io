@@ -6,6 +6,7 @@ import { Navbar } from "./components/nav";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
+import { LanguageProvider } from "./components/language";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -107,11 +108,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[768px] w-full">
-            <Navbar />
-            {children}
-            <Footer />
-          </main>
+          <LanguageProvider>
+            <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-6 max-w-[768px] w-full">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

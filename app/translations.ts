@@ -1,0 +1,93 @@
+import type { Language } from "./components/language";
+
+const translations = {
+  en: {
+    navAbout: "About", navStack: "Stack", navExperience: "Experience", navContact: "Contact",
+    greeting: "Hello, world! 👋", role: "Full-Stack Developer",
+    intro: "I build modern web applications with thoughtful design, reliable architecture, and a focus on creating meaningful digital experiences.",
+    getInTouch: "Get in touch ↗", viewExperience: "View experience ↓", aboutLabel: "01 / ABOUT",
+    aboutTitle: "A little about me", aboutText: "I'm a developer passionate about building applications from the user interface to the server-side logic. I enjoy learning new technologies, solving problems, and turning ideas into working products.",
+    stackLabel: "02 / TECH STACK", stackTitle: "Tools I work with", workLabel: "03 / SELECTED WORK",
+    workTitle: "Professional projects", workIntro: "A selection of professional work, product features, and engineering contributions from my experience as a Software Developer.",
+    current: "Current Experience", professional: "Professional Experience", contributions: "Key Contributions",
+    technologies: "Technologies", showMore: "Show More", showLess: "Show Less",
+    xtremaxSummary: "Contributing to software development through API development, micro-frontend modernization, and building web applications with modern technologies.",
+    xtremaxItems: [
+      "Developed Upload and Download APIs to support authenticated download links in email attachments.",
+      "Migrated two micro-frontend applications from Vue 2 to Vue 3.",
+      "Developed ROOTs 3.0 using Next.js and Directus.",
+    ],
+    doerscircleSummary: "Contributed to the development and improvement of the Doerscircle platform, focusing on user experience, team collaboration features, onboarding, and product functionality.",
+    doerscircleItems: [
+      "Implemented the revamped user dashboard.",
+      "Developed Team Account features, enabling users to create teams, invite and manage members, and assign or remove solutions.",
+      "Developed the referral feature.",
+      "Revamped the onboarding flow, including signup, login, email verification, and survey pages.",
+      "Identified and fixed bugs to improve application reliability.",
+      "Collaborated with UI/UX Designers and the Tech Lead to deliver new features.",
+      "Provided technical support and guidance to team members during development and debugging.",
+    ],
+    aiaSummary: "Worked on enterprise web and hybrid applications, contributing to frontend architecture, reusable UI components, testing, and cross-functional product development.",
+    aiaItems: [
+      "Developed ClaimsEZ, a web application built with React on top of Adobe Experience Manager (AEM).",
+      "Designed and structured the ClaimsEZ project architecture to improve scalability and maintainability.",
+      "Developed iPosX, a hybrid Point of Sales application using Vue.js, TypeScript, and Cordova.",
+      "Implemented unit testing for the iPosX application.",
+      "Created reusable UI components across React and Vue.js applications.",
+      "Documented application workflows and processes in Jira.",
+      "Collaborated with Product Managers, Backend Developers, and Frontend Developers to deliver new features.",
+      "Mentored Junior Frontend Developers and conducted regular knowledge-sharing sessions.",
+    ],
+    contactLabel: "04 / CONTACT", contactTitle: "Let's build something together.",
+    contactText: "Have an idea, a project, or an opportunity? I'd love to hear from you.",
+    photos: "Photos",
+  },
+  id: {
+    navAbout: "Tentang", navStack: "Teknologi", navExperience: "Pengalaman", navContact: "Kontak",
+    greeting: "Halo, dunia! 👋", role: "Pengembang Full-Stack",
+    intro: "Saya membangun aplikasi web modern dengan desain yang matang, arsitektur andal, dan fokus pada pengalaman digital yang bermakna.",
+    getInTouch: "Hubungi saya ↗", viewExperience: "Lihat pengalaman ↓", aboutLabel: "01 / TENTANG",
+    aboutTitle: "Sekilas tentang saya", aboutText: "Saya adalah pengembang yang senang membangun aplikasi, dari antarmuka pengguna hingga logika sisi server. Saya suka mempelajari teknologi baru, memecahkan masalah, dan mewujudkan ide menjadi produk.",
+    stackLabel: "02 / TEKNOLOGI", stackTitle: "Teknologi yang saya gunakan", workLabel: "03 / PENGALAMAN",
+    workTitle: "Proyek profesional", workIntro: "Pilihan pekerjaan profesional, fitur produk, dan kontribusi rekayasa perangkat lunak selama pengalaman saya sebagai Software Developer.",
+    current: "Pekerjaan Saat Ini", professional: "Pengalaman Profesional", contributions: "Kontribusi Utama",
+    technologies: "Teknologi", showMore: "Lihat Lainnya", showLess: "Tampilkan Lebih Sedikit",
+    xtremaxSummary: "Berkontribusi dalam pengembangan perangkat lunak melalui pengembangan API, modernisasi micro-frontend, dan pembuatan aplikasi web dengan teknologi modern.",
+    xtremaxItems: [
+      "Mengembangkan API Upload dan Download untuk mendukung tautan unduhan terautentikasi pada lampiran email.",
+      "Memigrasikan dua aplikasi micro-frontend dari Vue 2 ke Vue 3.",
+      "Mengembangkan ROOTs 3.0 menggunakan Next.js dan Directus.",
+    ],
+    doerscircleSummary: "Berkontribusi dalam pengembangan dan peningkatan platform Doerscircle, dengan fokus pada pengalaman pengguna, fitur kolaborasi tim, proses onboarding, dan fungsi produk.",
+    doerscircleItems: [
+      "Menerapkan pembaruan pada dashboard pengguna.",
+      "Mengembangkan fitur Team Account agar pengguna dapat membuat tim, mengundang dan mengelola anggota, serta menetapkan atau menghapus solusi.",
+      "Mengembangkan fitur referral.",
+      "Memperbarui alur onboarding, termasuk halaman pendaftaran, login, verifikasi email, dan survei.",
+      "Menemukan dan memperbaiki bug untuk meningkatkan keandalan aplikasi.",
+      "Berkolaborasi dengan UI/UX Designer dan Tech Lead untuk menghadirkan fitur baru.",
+      "Memberikan dukungan teknis dan arahan kepada anggota tim saat mengembangkan dan men-debug aplikasi.",
+    ],
+    aiaSummary: "Mengerjakan aplikasi web dan hybrid untuk perusahaan, dengan kontribusi pada arsitektur frontend, komponen UI yang dapat digunakan kembali, pengujian, dan pengembangan produk lintas fungsi.",
+    aiaItems: [
+      "Mengembangkan ClaimsEZ, aplikasi web berbasis React di atas Adobe Experience Manager (AEM).",
+      "Merancang dan menyusun arsitektur proyek ClaimsEZ agar lebih mudah dikembangkan dan dipelihara.",
+      "Mengembangkan iPosX, aplikasi Point of Sales hybrid menggunakan Vue.js, TypeScript, dan Cordova.",
+      "Menerapkan unit test untuk aplikasi iPosX.",
+      "Membuat komponen UI yang dapat digunakan kembali pada aplikasi React dan Vue.js.",
+      "Mendokumentasikan alur kerja dan proses aplikasi di Jira.",
+      "Berkolaborasi dengan Product Manager, Backend Developer, dan Frontend Developer untuk menghadirkan fitur baru.",
+      "Membimbing Junior Frontend Developer dan mengadakan sesi berbagi pengetahuan secara rutin.",
+    ],
+    contactLabel: "04 / KONTAK", contactTitle: "Mari bangun sesuatu bersama.",
+    contactText: "Punya ide, proyek, atau peluang? Saya senang mendengar kabar dari Anda.",
+    photos: "Foto",
+  },
+} as const;
+
+export function t<K extends keyof (typeof translations)["en"]>(
+  language: Language,
+  key: K,
+): (typeof translations)[Language][K] {
+  return translations[language][key];
+}
