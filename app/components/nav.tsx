@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="flex items-center justify-between gap-4">
         {/* Logo */}
         <Link
-          href="/"
+          href={`/${language}/`}
           onClick={() => setIsOpen(false)}
           className="shrink-0 text-lg font-semibold tracking-tight"
         >
@@ -43,7 +43,7 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="border-l border-neutral-200 pl-4 dark:border-neutral-700">
+          <div className="border-s border-neutral-200 ps-4 dark:border-neutral-700">
             <div className="flex items-center gap-3">
               <LanguageSwitch />
               <ThemeSwitch />
