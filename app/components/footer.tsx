@@ -1,13 +1,6 @@
 "use client";
 
-import React from "react";
-import {
-  FaXTwitter,
-  FaGithub,
-  FaInstagram,
-  FaRss,
-  FaLinkedinIn,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
 
@@ -23,31 +16,23 @@ function SocialLink({ href, icon: Icon }) {
 
 function SocialLinks() {
   return (
-    <div className="flex text-lg gap-3.5 float-end transition-opacity duration-300 hover:opacity-90">
-      <SocialLink href={socialLinks.twitter} icon={FaXTwitter} />
+    <div className="flex text-lg gap-3.5 transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
       <SocialLink href={socialLinks.email} icon={TbMailFilled} />
-      <a href="/rss.xml" target="_self">
-        <FaRss />
-      </a>
     </div>
   );
 }
 
 export default function Footer() {
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
-      <time>© {YEAR}</time>{" "}
-      <a
-        className="no-underline"
-        href={socialLinks.twitter}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {metaData.title}
-      </a>
+    <footer className="mt-16 block w-full text-[#1C1C1C] dark:text-[#D4D4D4] lg:mt-24">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <small>
+          <time>© {YEAR}</time> {metaData.title}
+        </small>
+        <SocialLinks />
+      </div>
       <style jsx>{`
         @media screen and (max-width: 480px) {
           article {
@@ -56,7 +41,6 @@ export default function Footer() {
           }
         }
       `}</style>
-      <SocialLinks />
-    </small>
+    </footer>
   );
 }

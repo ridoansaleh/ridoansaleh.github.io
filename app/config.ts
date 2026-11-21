@@ -8,9 +8,7 @@ export const metaData = {
 };
 
 export const socialLinks = {
-  twitter: "https://x.com",
   github: "https://github.com/ridoansaleh",
-  instagram: "https://www.instagram.com/",
   linkedin: "https://www.linkedin.com/in/ridoansalehnasution/",
   email: "mailto:ridoansalehnasution@gmail.com",
 };
